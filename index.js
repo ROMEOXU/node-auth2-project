@@ -89,6 +89,10 @@ server.get('/api/logout',async (req,res,next)=>{
   }
 })
 
+server.get('/',(req,res)=>{
+res.send('romeo is building API here')
+})
+
 server.listen(PORT,()=>{
     console.log(`now you are listening on ${PORT}`)
 })
