@@ -75,6 +75,20 @@ server.get('/api/users',useMiddleware.restrict('admin'),async (req,res,next)=>{
  }
 })
 
+server.get('/api/logout',async (req,res,next)=>{
+  try{
+    req.session.destroy((err) => {
+        if (err) {
+            next(err)
+        } else {
+            res.status(204).end()
+        }
+    })
+  }catch(err){
+      next(err)
+  }
+})
+
 server.listen(PORT,()=>{
     console.log(`now you are listening on ${PORT}`)
 })

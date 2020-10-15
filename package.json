@@ -4,7 +4,8 @@
   "description": "## Introduction",
   "main": "index.js",
   "scripts": {
-    "romeo": "nodemon -r dotenv/config index.js"
+    "romeo": "nodemon -r dotenv/config index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
