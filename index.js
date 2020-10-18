@@ -4,8 +4,9 @@ const Users = require('./user-model');
 const bcrypt = require('bcryptjs');
 const useMiddleware = require('./restrict');
 const jwt = require('jsonwebtoken');
+const cors = require('cors');
 server.use(express.json());
-
+server.use(cors());
 const PORT = process.env.PORT || 5300;
 
 server.use((err,req,res,next)=>{
